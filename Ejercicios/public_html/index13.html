@@ -4,16 +4,17 @@
         <meta charset="utf-8">
         <title>Herencia</title>
         <style type="text/css">
-            body {
-                background-color: #999;
-                color: #000;
-            }
             h1 {
                 background-color: #555;
                 color: #999;
             }
             .cabecera {
-                
+                background-color: #ABC;
+                color: #987;                
+            }
+            #caja {
+                background-color: #123;
+                color: #456;                
             }
         </style>
 
@@ -23,8 +24,13 @@
         <div id="caja">
 
             <header class="cabecera">
-                <h1>Cabecera: header</h1>
+                <h1>Cabecera: header (Puntuación:0,1,1,1)</h1>
+                <h2>h2 en header (Puntuación:0,1,1,0)</h2>
             </header>
+            <nav>
+                <p>Párrafo en nav (Puntuación:0,1,0,0)</p>
+                <p style="background-color: #000; color: #FFF;">Párrafo con estilo en línea: (Puntuación:1,1,0,0)</p>
+            </nav>
 
         </div>
     </body>
