@@ -1,8 +1,6 @@
 {
-    "name": "Ejercicios",
-    "version": "1.0.0",
-    "keywords": ["util", "functional", "server", "client", "browser"],
-    "author": "carlos",
-    "contributors": [],
-    "dependencies": {}
+    "name": "Ejercicios", "version": "1.0.0", "keywords": [
+        "util", "functional", "server", "client", "browser"
+    ], "author": "carlos", "contributors": [
+    ], "dependencies": {}
 }
