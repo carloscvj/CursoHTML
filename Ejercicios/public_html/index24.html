@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Módulo 1</title>
+        <link href='http://fonts.googleapis.com/css?family=Caesar+Dressing' rel='stylesheet' type='text/css'>
+        <style type="text/css">
+            @font-face {
+                font-family: 'fira';
+                src: url('FiraSansOT-Light.otf');
+            }
+            .lafira{
+                font-family: fira;
+                font-size: 36px;
+            }
+            .ladegoogle{
+                font-family: 'Caesar Dressing', cursive;
+                font-size: xx-large;
+            }
+            
+            body {
+                background-color: #dddddd;
+                color: #2200ff;
+                text-align: center;
+            }
+            header {
+                background-color: rgba(97,97,0,0.1);
+            }
+            h3 {
+                color: #ff6600
+            }
+            article {
+                float: left;
+                padding: 5px;
+                margin-right: 5px;
+                margin-bottom: 5px;
+                border: 1px solid #666;
+                border-radius: 10px;
+                min-width: 400px;
+                min-height: 400px;
+                background-color: rgba(100,50,100,0.1);
+
+            }
+            a:hover {
+                background-color: white;
+            }
+
+            footer {
+                clear: both;
+                text-align: right;
+                background-color: rgba(97,97,0,0.1);
+            }
+        </style>        
+    </head>
+    <body>
+        <header>
+            <h1>Página personal de Carlos Vázquez</h1>
+            <h2>Entrega P2P Obligatoria</h2>
+        </header>
+        <section>
+            <article>
+                <h3>Tipografías externas</h3>
+                <p class="lafira"> PRUEBA DE <strong>TEXTO</strong> TIPOGRAFÍA <em>Fira Sans</em></p>  
+                <p class="ladegoogle"> PRUEBA DE <strong>TEXTO</strong> TIPOGRAFÍA <em>Caesar Dressing de Google</em></p>
+            </article>
+            <article>
+                <h3>Una imagen bitmap de tipo png</h3>
+                <img src="firefox-os.png" alt="una imagen de firefox"/>
+            </article>
+            <article>
+                <h3>Una imagen vectorial de tipo svg</h3>
+                <img src="Circulos.svg" alt="una imagen de círculos moviendose"/>
+            </article>
+            <article>
+                <h3>Un vídeo de youtube</h3>
+                <iframe width="400" height="300"
+                        src="https://www.youtube.com/embed/vxxOsYBHHZk"
+                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                </iframe>
+            </article>
+        </section>
+        <footer>
+            <p>Desarrollo en HTML5, CSS y Javascript de Apps Web, Android, IOS...</p>            
+        </footer>
+    </body>
+</html>
