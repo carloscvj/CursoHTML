@@ -5,6 +5,7 @@
     </head>
     <body>
         <h1 id="h1"></h1>
+        <h2>Carlos Vázquez Jorge</h2>
         <h2 id="h2">La fecha y la hora son:</h2>
         <div id="fecha"></div>
 
@@ -22,8 +23,41 @@
                 msj = "Buenas noches";
             }
 
-            document.getElementById("h1").innerHTML = msj + ": Carlos Vázquez Jorge";
+            document.getElementById("h1").innerHTML = msj;
             document.getElementById("fecha").innerHTML = fecha;
         </script>
+        <p></p>
+        <div id="cajaa"></div>
+        <script type="text/javascript">
+            var contenido = document.getElementById("h2");
+            var caja = document.getElementById("cajaa");
+            caja.innerHTML = contenido.innerHTML;
+        </script>
+        <p></p>
+        <div id="cajab"></div>
+        <script type="text/javascript">
+            var contenido = document.getElementById("h1");
+            var caja = document.getElementById("cajab");
+            caja.innerHTML = contenido.outerHTML;
+        </script>
+        <p></p>
+        <div id="cajac"></div>
+        <script type="text/javascript">
+            var caja = document.getElementById("cajac");
+            caja.innerHTML = location.href;
+        </script>
+        <p></p>
+        <div id="cajad"></div>
+        <script type="text/javascript">
+            var caja = document.getElementById("cajad");
+            caja.innerHTML = location;
+        </script>
+        <p></p>
+        <div id="cajae"></div>
+        <script type="text/javascript">
+            var caja = document.getElementById("cajae");
+            caja.innerHTML = screen.width + ", " + screen.height;
+        </script>
+
     </body>
 </html>
