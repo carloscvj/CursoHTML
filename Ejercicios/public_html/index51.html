@@ -10,10 +10,10 @@
                 var acc = 0, op = "";
                 var num = $("#num");
                 $("#num").on("click", function(){ $("#num").val("");});
-                $("#mas").on("click", function(){acc = num.value;op = "+";});
-                $("#menos").on("click", function(){acc = num.value;op = "-";});
-                $("#por").on("click", function(){acc = num.value;op = "*";});
-                $("#entre").on("click", function(){acc = num.value;op = "//";});
+                $("#mas").on("click", function(){acc = num.val();op = "+";});
+                $("#menos").on("click", function(){acc = num.val();op = "-";});
+                $("#por").on("click", function(){acc = num.val();op = "*";});
+                $("#entre").on("click", function(){acc = num.val();op = "//";});
                 $("#calcular").on("click", function(){
                     if (op === "+") {
                         num.value = (+acc + +num.value);
