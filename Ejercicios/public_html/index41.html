@@ -15,6 +15,14 @@
                 acc = num.value;
                 op = "-";
             }
+            function por() {
+                acc = num.value;
+                op = "*";
+            }
+            function entre() {
+                acc = num.value;
+                op = "//";
+            }
             function calcular() {
                 if (op === "+") {
                     num.value = (+acc + +num.value);
@@ -22,6 +30,35 @@
                 if (op === "-") {
                     num.value = (+acc - +num.value);
                 }
+                if (op === "*") {
+                    num.value = (+acc * +num.value);
+                }
+                if (op === "//") {
+                    num.value = (+acc / +num.value);
+                }
+                if(op==="elevado") {
+                    num.value = (Math.pow(+acc,+num.value));
+                }
+            }
+            function cuadrado() {
+                num.value = num.value * num.value;
+            }
+            function inverso() {
+                num.value = 1 / num.value;
+            }
+            function raiz() {
+                num.value = Math.sqrt(num.value);
+            }
+            function parteEntera() {
+                if (num.value < 0) {
+                    num.value = Math.ceil(num.value);
+                } else {
+                    num.value = Math.floor(num.value);
+                }
+            }
+            function elevado() {
+                acc = num.value;
+                op = "elevado";
             }
             function inic() {
                 num = document.getElementById("num");
@@ -34,12 +71,20 @@
     <body onLoad="inic()">
         <h1>Buenos días, bienvenido a la calculadora de Carlos Vázquez</h1>
         <p>Número:
-        <input type="text" size="12" id="num" onClick="vaciar()">
+            <input type="text" size="12" id="num" onClick="vaciar()">
         <p></p>
         <p>
             <button onClick="mas()">+</button>
             <button onClick="menos()">-</button>
+            <button onClick="por()">*</button>
+            <button onClick="entre()">/</button>
             <button onClick="calcular()">=</button>
+
+            <button onclick="cuadrado()">x<sup>2</sup></button>
+            <button onclick="inverso()"> 1/x </button>  
+            <button onclick="raiz()"> raiz </button>  
+            <button onclick="parteEntera()"> parte entera </button>
+            <button onclick="elevado()"> x^y </button>
         </p>
     </body>
 </html>
