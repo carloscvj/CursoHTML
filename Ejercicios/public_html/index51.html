@@ -3,89 +3,66 @@
     <head>
         <title>Ejemplo</title>
         <meta charset="utf-8">
-
+        <script type="text/javascript" src="jquery-2.1.4.min.js" ></script>
         <script type="text/javascript">
-            var num, acc = 0, op = "";
 
-            function mas() {
-                acc = num.value;
-                op = "+";
-            }
-            function menos() {
-                acc = num.value;
-                op = "-";
-            }
-            function por() {
-                acc = num.value;
-                op = "*";
-            }
-            function entre() {
-                acc = num.value;
-                op = "//";
-            }
-            function calcular() {
-                if (op === "+") {
-                    num.value = (+acc + +num.value);
-                }
-                if (op === "-") {
-                    num.value = (+acc - +num.value);
-                }
-                if (op === "*") {
-                    num.value = (+acc * +num.value);
-                }
-                if (op === "//") {
-                    num.value = (+acc / +num.value);
-                }
-                if (op === "elevado") {
-                    num.value = (Math.pow(+acc, +num.value));
-                }
-            }
-            function cuadrado() {
-                num.value = num.value * num.value;
-            }
-            function inverso() {
-                num.value = 1 / num.value;
-            }
-            function raiz() {
-                num.value = Math.sqrt(num.value);
-            }
-            function parteEntera() {
-                if (num.value < 0) {
-                    num.value = Math.ceil(num.value);
-                } else {
-                    num.value = Math.floor(num.value);
-                }
-            }
-            function elevado() {
-                acc = num.value;
-                op = "elevado";
-            }
-            function inic() {
-                num = document.getElementById("num");
-            }
-            function vaciar() {
-                num.value = "";
-            }
+            $(function () {
+                var acc = 0, op = "";
+                var num = $("#num");
+                $("#num").on("click", function(){ $("#num").val("");});
+                $("#mas").on("click", function(){acc = num.value;op = "+";});
+                $("#menos").on("click", function(){acc = num.value;op = "-";});
+                $("#por").on("click", function(){acc = num.value;op = "*";});
+                $("#entre").on("click", function(){acc = num.value;op = "//";});
+                $("#calcular").on("click", function(){
+                    if (op === "+") {
+                        num.value = (+acc + +num.value);
+                    }
+                    if (op === "-") {
+                        num.value = (+acc - +num.value);
+                    }
+                    if (op === "*") {
+                        num.value = (+acc * +num.value);
+                    }
+                    if (op === "//") {
+                        num.value = (+acc / +num.value);
+                    }
+                    if (op === "elevado") {
+                        num.value = (Math.pow(+acc, +num.value));
+                    }
+                });
+                $("#cuadrado").on("click", function(){num.value = num.value * num.value;});
+                $("#inverso").on("click", function(){num.value = 1 / num.value;});
+                $("#raiz").on("click", function(){num.value = Math.sqrt(num.value);});
+                $("#parteEntera").on("click", function() {
+                    if (num.value < 0) {
+                        num.value = Math.ceil(num.value);
+                    } else {
+                        num.value = Math.floor(num.value);
+                    }
+                });
+                $("#elevado").on("click", function() {acc = num.value;op = "elevado";});
+            });
         </script>
     </head>
-    <body onLoad="inic()">
+    <body>
         <h1>Buenos días, bienvenido a la calculadora de Carlos Vázquez</h1>
         <p>Número:
-            <input type="text" size="12" id="num" onClick="vaciar()">
+            <input type="text" size="120" id="num">
         <p></p>
         <p>
-            <button onClick="mas()">+</button>
-            <button onClick="menos()">-</button>
-            <button onClick="por()">*</button>
-            <button onClick="entre()">/</button>
-            <button onclick="elevado()"> x^y </button>
-            <button onClick="calcular()">=</button>
+            <button id="mas">+</button>
+            <button id="menos">-</button>
+            <button id="por">*</button>
+            <button id="entre">/</button>
+            <button id="elevado"> x^y </button>
+            <button id="calcular">=</button>
         </p>
         <p>
-            <button onclick="cuadrado()">x<sup>2</sup></button>
-            <button onclick="inverso()"> 1/x </button>  
-            <button onclick="raiz()"> raiz </button>  
-            <button onclick="parteEntera()"> parte entera </button>
+            <button id="cuadrado">x<sup>2</sup></button>
+            <button id="inverso"> 1/x </button>  
+            <button id="raiz"> raiz </button>  
+            <button id="parteEntera"> parte entera </button>
         </p>
     </body>
 </html>
