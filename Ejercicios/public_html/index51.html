@@ -9,13 +9,30 @@
             $(function () {
                 var acc = 0, op = "";
                 var num = $("#num");
-                $("#num").on("click", function(){ num.val("");});
-                $("#mas").on("click", function(){acc = num.val();op = "+";});
-                $("#menos").on("click", function(){acc = num.val();op = "-";});
-                $("#por").on("click", function(){acc = num.val();op = "*";});
-                $("#entre").on("click", function(){acc = num.val();op = "//";});
-                $("#elevado").on("click", function() {acc = num.val();op = "elevado";});
-                $("#calcular").on("click", function(){
+                $("#num").on("click", function () {
+                    num.val("");
+                });
+                $("#mas").on("click", function () {
+                    acc = num.val();
+                    op = "+";
+                });
+                $("#menos").on("click", function () {
+                    acc = num.val();
+                    op = "-";
+                });
+                $("#por").on("click", function () {
+                    acc = num.val();
+                    op = "*";
+                });
+                $("#entre").on("click", function () {
+                    acc = num.val();
+                    op = "//";
+                });
+                $("#elevado").on("click", function () {
+                    acc = num.val();
+                    op = "elevado";
+                });
+                $("#calcular").on("click", function () {
                     if (op === "+") {
                         num.val(+acc + +num.val());
                     }
@@ -32,17 +49,33 @@
                         num.val(Math.pow(+acc, +num.val()));
                     }
                 });
-                $("#cuadrado").on("click", function(){num.val(num.val() * num.val());});
-                $("#inverso").on("click", function(){num.val(1 / num.val());});
-                $("#raiz").on("click", function(){num.val(Math.sqrt(num.val()));});
-                $("#parteEntera").on("click", function() {
+                $("#cuadrado").on("click", function () {
+                    num.val(num.val() * num.val());
+                });
+                $("#inverso").on("click", function () {
+                    num.val(1 / num.val());
+                });
+                $("#raiz").on("click", function () {
+                    num.val(Math.sqrt(num.val()));
+                });
+                $("#parteEntera").on("click", function () {
                     if (num.val() < 0) {
                         num.val(Math.ceil(num.val()));
                     } else {
                         num.val(Math.floor(num.val()));
                     }
                 });
-            });
+                $("#dosN").on("click", function () {
+                    num.val(Math.pow(2, num.val()));
+                });
+                $("#factorial").on("click", function () {
+                    var i=1;
+                    for(var res=1;i<=num.val();i++) {
+                        res *=i;
+                    }
+                    num.val(res);
+                });
+    });
         </script>
     </head>
     <body>
@@ -63,6 +96,8 @@
             <button id="inverso"> 1/x </button>  
             <button id="raiz"> raiz </button>  
             <button id="parteEntera"> parte entera </button>
+            <button id="dosN">2<sup>n</sup></button>
+            <button id="factorial">n!</button>
         </p>
     </body>
 </html>
