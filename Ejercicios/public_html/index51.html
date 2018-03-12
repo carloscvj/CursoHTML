@@ -9,39 +9,39 @@
             $(function () {
                 var acc = 0, op = "";
                 var num = $("#num");
-                $("#num").on("click", function(){ $("#num").val("");});
+                $("#num").on("click", function(){ num.val("");});
                 $("#mas").on("click", function(){acc = num.val();op = "+";});
                 $("#menos").on("click", function(){acc = num.val();op = "-";});
                 $("#por").on("click", function(){acc = num.val();op = "*";});
                 $("#entre").on("click", function(){acc = num.val();op = "//";});
+                $("#elevado").on("click", function() {acc = num.val();op = "elevado";});
                 $("#calcular").on("click", function(){
                     if (op === "+") {
-                        num.value = (+acc + +num.value);
+                        num.val(+acc + +num.val());
                     }
                     if (op === "-") {
-                        num.value = (+acc - +num.value);
+                        num.val(+acc - +num.val());
                     }
                     if (op === "*") {
-                        num.value = (+acc * +num.value);
+                        num.val(+acc * +num.val());
                     }
                     if (op === "//") {
-                        num.value = (+acc / +num.value);
+                        num.val(+acc / +num.val());
                     }
                     if (op === "elevado") {
-                        num.value = (Math.pow(+acc, +num.value));
+                        num.val(Math.pow(+acc, +num.val()));
                     }
                 });
-                $("#cuadrado").on("click", function(){num.value = num.value * num.value;});
-                $("#inverso").on("click", function(){num.value = 1 / num.value;});
-                $("#raiz").on("click", function(){num.value = Math.sqrt(num.value);});
+                $("#cuadrado").on("click", function(){num.val(num.val() * num.val());});
+                $("#inverso").on("click", function(){num.val(1 / num.val());});
+                $("#raiz").on("click", function(){num.val(Math.sqrt(num.val()));});
                 $("#parteEntera").on("click", function() {
-                    if (num.value < 0) {
-                        num.value = Math.ceil(num.value);
+                    if (num.val() < 0) {
+                        num.val(Math.ceil(num.val()));
                     } else {
-                        num.value = Math.floor(num.value);
+                        num.val(Math.floor(num.val()));
                     }
                 });
-                $("#elevado").on("click", function() {acc = num.value;op = "elevado";});
             });
         </script>
     </head>
