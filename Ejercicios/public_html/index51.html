@@ -15,22 +15,35 @@
                 $("#mas").on("click", function () {
                     acc = num.val();
                     op = "+";
+                    num.val("");
+                    $("#num").focus();
                 });
                 $("#menos").on("click", function () {
                     acc = num.val();
                     op = "-";
+                    num.val("");
+                    $("#num").focus();
                 });
                 $("#por").on("click", function () {
                     acc = num.val();
                     op = "*";
+                    num.val("");
+                    $("#num").focus();
+
                 });
                 $("#entre").on("click", function () {
                     acc = num.val();
                     op = "//";
+                    num.val("");
+                    $("#num").focus();
+
                 });
                 $("#elevado").on("click", function () {
                     acc = num.val();
                     op = "elevado";
+                    num.val("");
+                    $("#num").focus();
+
                 });
                 $("#calcular").on("click", function () {
                     if (op === "+") {
@@ -69,13 +82,13 @@
                     num.val(Math.pow(2, num.val()));
                 });
                 $("#factorial").on("click", function () {
-                    var i=1;
-                    for(var res=1;i<=num.val();i++) {
-                        res *=i;
+                    var i = 1;
+                    for (var res = 1; i <= num.val(); i++) {
+                        res *= i;
                     }
                     num.val(res);
                 });
-    });
+            });
         </script>
     </head>
     <body>
