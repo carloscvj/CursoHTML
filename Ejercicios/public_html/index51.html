@@ -96,6 +96,14 @@
                     }
                     num.val(res);
                 });
+                $("#productor").on("click", function () {
+                    var res = 1;
+                    var lista = num.val().split(",");
+                    for (var i = 0; i < lista.length; i++) {
+                        res *= +lista[i];
+                    }
+                    num.val(res);
+                });                
             });
         </script>
     </head>
@@ -122,6 +130,7 @@
         </p>
         <p>
             <button id="sumatorio">Σ x</button>
+            <button id="productor">!Σ x</button>
         </p>
     </body>
 </html>
