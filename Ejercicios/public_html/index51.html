@@ -88,6 +88,14 @@
                     }
                     num.val(res);
                 });
+                $("#sumatorio").on("click", function () {
+                    var res = 0;
+                    var lista = num.val().split(",");
+                    for (var i = 0; i < lista.length; i++) {
+                        res += +lista[i];
+                    }
+                    num.val(res);
+                });
             });
         </script>
     </head>
@@ -111,6 +119,9 @@
             <button id="parteEntera"> parte entera </button>
             <button id="dosN">2<sup>n</sup></button>
             <button id="factorial">n!</button>
+        </p>
+        <p>
+            <button id="sumatorio">Σ x</button>
         </p>
     </body>
 </html>
