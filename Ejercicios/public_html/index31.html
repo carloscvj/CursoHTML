@@ -4,60 +4,61 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <h1 id="h1"></h1>
-        <h2>Carlos Vázquez Jorge</h2>
-        <h2 id="h2">La fecha y la hora son:</h2>
-        <div id="fecha"></div>
+        <div class="container">
+            <h1 id="h1"></h1>
+            <h2>Carlos Vázquez Jorge</h2>
+            <h2 id="h2">La fecha y la hora son:</h2>
+            <div id="fecha"></div>
 
-        <script type="text/javascript">
-            var fecha = new Date();
-            var msj;
+            <script type="text/javascript">
+                var fecha = new Date();
+                var msj;
 
-            if (fecha.getHours() < 7) {
-                msj = "Buenas noches";
-            } else if (fecha.getHours() < 12) {
-                msj = "Buenos días";
-            } else if (fecha.getHours() < 21) {
-                msj = "Buenas tardes";
-            } else {
-                msj = "Buenas noches";
-            }
+                if (fecha.getHours() < 7) {
+                    msj = "Buenas noches";
+                } else if (fecha.getHours() < 12) {
+                    msj = "Buenos días";
+                } else if (fecha.getHours() < 21) {
+                    msj = "Buenas tardes";
+                } else {
+                    msj = "Buenas noches";
+                }
 
-            document.getElementById("h1").innerHTML = msj;
-            document.getElementById("fecha").innerHTML = fecha;
-        </script>
-        <p></p>
-        <div id="cajaa"></div>
-        <script type="text/javascript">
-            var contenido = document.getElementById("h2");
-            var caja = document.getElementById("cajaa");
-            caja.innerHTML = contenido.innerHTML;
-        </script>
-        <p></p>
-        <div id="cajab"></div>
-        <script type="text/javascript">
-            var contenido = document.getElementById("h1");
-            var caja = document.getElementById("cajab");
-            caja.innerHTML = contenido.outerHTML;
-        </script>
-        <p></p>
-        <div id="cajac"></div>
-        <script type="text/javascript">
-            var caja = document.getElementById("cajac");
-            caja.innerHTML = location.href;
-        </script>
-        <p></p>
-        <div id="cajad"></div>
-        <script type="text/javascript">
-            var caja = document.getElementById("cajad");
-            caja.innerHTML = location;
-        </script>
-        <p></p>
-        <div id="cajae"></div>
-        <script type="text/javascript">
-            var caja = document.getElementById("cajae");
-            caja.innerHTML = screen.width + ", " + screen.height;
-        </script>
-
+                document.getElementById("h1").innerHTML = msj;
+                document.getElementById("fecha").innerHTML = fecha;
+            </script>
+            <p></p>
+            <div id="cajaa"></div>
+            <script type="text/javascript">
+                var contenido = document.getElementById("h2");
+                var caja = document.getElementById("cajaa");
+                caja.innerHTML = contenido.innerHTML;
+            </script>
+            <p></p>
+            <div id="cajab"></div>
+            <script type="text/javascript">
+                var contenido = document.getElementById("h1");
+                var caja = document.getElementById("cajab");
+                caja.innerHTML = contenido.outerHTML;
+            </script>
+            <p></p>
+            <div id="cajac"></div>
+            <script type="text/javascript">
+                var caja = document.getElementById("cajac");
+                caja.innerHTML = location.href;
+            </script>
+            <p></p>
+            <div id="cajad"></div>
+            <script type="text/javascript">
+                var caja = document.getElementById("cajad");
+                caja.innerHTML = location;
+            </script>
+            <p></p>
+            <div id="cajae"></div>
+            <script type="text/javascript">
+                var caja = document.getElementById("cajae");
+                caja.innerHTML = screen.width + ", " + screen.height;
+            </script>
+        </div>
     </body>
 </html>

@@ -36,8 +36,8 @@
                 if (op === "//") {
                     num.value = (+acc / +num.value);
                 }
-                if(op==="elevado") {
-                    num.value = (Math.pow(+acc,+num.value));
+                if (op === "elevado") {
+                    num.value = (Math.pow(+acc, +num.value));
                 }
             }
             function cuadrado() {
@@ -69,22 +69,24 @@
         </script>
     </head>
     <body onLoad="inic()">
-        <h1>Buenos días, bienvenido a la calculadora de Carlos Vázquez</h1>
-        <p>Número:
-            <input type="text" size="12" id="num" onClick="vaciar()">
-        <p></p>
-        <p>
-            <button onClick="mas()">+</button>
-            <button onClick="menos()">-</button>
-            <button onClick="por()">*</button>
-            <button onClick="entre()">/</button>
-            <button onClick="calcular()">=</button>
+        <div class="container">
+            <h1>Buenos días, bienvenido a la calculadora de Carlos Vázquez</h1>
+            <p>Número:
+                <input type="text" size="12" id="num" onClick="vaciar()">
+            <p></p>
+            <p>
+                <button onClick="mas()">+</button>
+                <button onClick="menos()">-</button>
+                <button onClick="por()">*</button>
+                <button onClick="entre()">/</button>
+                <button onClick="calcular()">=</button>
 
-            <button onclick="cuadrado()">x<sup>2</sup></button>
-            <button onclick="inverso()"> 1/x </button>  
-            <button onclick="raiz()"> raiz </button>  
-            <button onclick="parteEntera()"> parte entera </button>
-            <button onclick="elevado()"> x^y </button>
-        </p>
+                <button onclick="cuadrado()">x<sup>2</sup></button>
+                <button onclick="inverso()"> 1/x </button>  
+                <button onclick="raiz()"> raiz </button>  
+                <button onclick="parteEntera()"> parte entera </button>
+                <button onclick="elevado()"> x^y </button>
+            </p>
+        </div>
     </body>
 </html>
