@@ -12,17 +12,23 @@
             .container .carousel-indicators li      { border: 1px solid orange;}
             .container .panel-footer                { margin-top:20px;}
         </style>
-        
+
         <title>Ejemplo</title>
         <meta charset="utf-8">
         <script type="text/javascript" src="jquery-2.1.4.min.js" ></script>
         <script type="text/javascript">
 
             $(function () {
-                var acc = 0, op = "";
+                var acc = 0, op = "", memoria = "";
                 var num = $("#num");
                 $("#num").on("click", function () {
                     num.val("");
+                });
+                $("#toM").on("click", function () {
+                    memoria = num.val();
+                });
+                $("#fromM").on("click", function () {
+                    num.val(memoria);
                 });
                 $("#mas").on("click", function () {
                     acc = num.val();
@@ -143,10 +149,12 @@
                     </div>
                 </div>
             </nav>
-            
+
             <h1>Buenos días, bienvenido a la calculadora de Carlos Vázquez</h1>
             <p>Número:
-                <input type="text" size="60" id="num">
+                <input type="text" size="50" id="num">
+                <button id="toM">toM</button>
+                <button id="fromM">fromM</button>
             <p></p>
             <p>
                 <button id="mas">+</button>
