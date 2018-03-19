@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Example</title><meta charset="UTF-8">
+        <script type="text/javascript" src="js/zepto.min.js" ></script>
+        <script type="text/javascript" src="js/touch.js" ></script>
+        <script type="text/javascript">
+            $(function () {
+                var t, cl = $("#crono");
+
+                function mostrar() {
+                    cl.html((+cl.html() + 0.01).toFixed(2));
+                }
+                ;
+
+                function arrancar() {
+                    t = setInterval(mostrar, 10);
+                }
+                ;
+
+                function parar() {
+                    clearInterval(t);
+                    t = undefined;
+                }
+                ;
+
+                function cambiar() {
+                    if (!t) {
+                        arrancar();
+                    } else {
+                        parar();
+                    }
+                }
+                ;
+
+
+                if ("ontouchstart" in document.documentElement) {
+                    $("body").on("tap", function (e) {
+                        alert('tap');
+                    });
+                    $("body").on("swipe", function (e) {
+                        alert('swipe');
+                    });
+                } else {
+                    $('#cambiar').on('click', cambiar);
+                    $('#inicializar').on('click', function () {
+                        cl.html("0.0");
+                    });
+                }
+
+            });
+        </script>
+    </head>
+    <body>
+        <section>
+            <h2>Cronómetro</h2>
+            <h2><span id="crono"> 0.00 </span> segundos </h2>
+            <button type="button" id="cambiar"> arrancar/parar </button>
+            <button type="button" id="inicializar">  inicializar </button>
+        </section>
+    </body>
+</html>
