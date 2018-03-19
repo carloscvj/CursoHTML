@@ -7,6 +7,7 @@
         <script type="text/javascript">
             $(function () {
                 var t, cl = $("#crono");
+                var hist = $("#historial");
 
                 function mostrar() {
                     cl.html((+cl.html() + 0.01).toFixed(2));
@@ -19,6 +20,7 @@
                 ;
 
                 function parar() {
+                    hist.html(hist.html() + "<p>" + cl.html() + "</p>")
                     clearInterval(t);
                     t = undefined;
                 }
@@ -57,6 +59,10 @@
             <h2><span id="crono"> 0.00 </span> segundos </h2>
             <button type="button" id="cambiar"> arrancar/parar </button>
             <button type="button" id="inicializar">  inicializar </button>
+        </section>
+        <section>
+            <h2>Cronometrado hasta ahora</h2>
+            <div id="historial"></div>
         </section>
     </body>
 </html>
