@@ -22,5 +22,10 @@ var galeria = [
    { persona:"Henrik Ibsen - hɛnɾɪk ˈjoːhɑn ˈɪpsən",
      frase:"Si dudas de ti mismo, estás vencido de antemano.",
      foto:"https://ebooks.adelaide.edu.au/i/ibsen/henrik/gosse/images/bust2.jpg"
+   },
+   { persona:"Lenin - Vladímir Ilich Uliánov",
+     frase:"No hay teoría revolucionaria sin práctica revolucionaria y viceversa",
+     foto:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwFlquDct4Edh30Tdi0io63G2wTMV0aC5rdjTlhIGfl8om_Mzi"
    }
+
 ];
