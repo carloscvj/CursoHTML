@@ -14,7 +14,7 @@
             $(function () {
 
                 function compactar() {
-                    geolocalizar();
+                    //geolocalizar();
                     map.drawRoute({
                         origin: [primelat, primelng], // origen en coordenadas anteriores
                         // destino en coordenadas del click o toque actual
@@ -59,7 +59,8 @@
                                 click: enlazarMarcador,
                                 tap: enlazarMarcador
                             });
-                            map.addMarker({lat: primelat, lng: primelng});  // marcador en [lat, lng]
+                            lat = primelat, lng = primelng;
+                            map.addMarker({lat: lat, lng: lng});  // marcador en [lat, lng]
                         },
                         error: function (error) {
                             alert('Geolocalización falla: ' + error.message);
